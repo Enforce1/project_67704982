@@ -13,15 +13,18 @@
         <li class="nav-item">
           <a class="nav-link" href="/showproduct">Show Product</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/customer">Customer</a>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             login
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">login</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">-</a>logout</li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="add_customer">Register</a></li>
           </ul>
         </li>
         <li class="nav-item">
