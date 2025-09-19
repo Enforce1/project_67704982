@@ -1,28 +1,39 @@
 <template>
   <div class="container mt-4">
-    <h2 class="mb-3">รายชื่อลูกค้า</h2>
+    <h2 class="mb-3">เเสดงข้อมูลสินค้า</h2>
 
   <div class="mb-3">
-    <a class="btn btn-primary" href="/add_customer" rolo="button">Add+</a>
+    <a class="btn btn-primary" href="/addproduct" rolo="button">Add+</a>
   </div>  
     <!-- ตารางแสดงข้อมูลลูกค้า -->
     <table class="table table-bordered table-striped">
       <thead class="table-dark">
         <tr>
-          <th>ID</th>
-          <th>ชื่อ</th>
-          <th>นามสกุล</th>
-          <th>เบอร์โทร</th>
-          <th>ชื่อผู้ใช้</th>
+          <th>รหัสสินค้า</th>
+          <th>ชื่อสินค้า</th>
+          <th>รายละเอียด</th>
+          <th>ราคา</th>
+          <th>จำนวน</th>
+          <th>รูปภาพ</th>
         </tr>
       </thead>
       <tbody>
-        <tr v-for="customer in customers" :key="customer.customer_id">
-          <td>{{ customer.customer_id }}</td>
-          <td>{{ customer.firstName }}</td>
-          <td>{{ customer.lastName }}</td>
-          <td>{{ customer.phone }}</td>
-          <td>{{ customer.username }}</td>
+        <tr v-for="product in products" :key="product.product_id">
+          <td>{{ product.product_id }}</td>
+          <td>{{ product.product_name }}</td>
+          <td>{{ product.description }}</td>
+          <td>{{ product.price }}</td>
+          <td>{{ product.stock }}</td>
+          <td>
+            
+            <img
+            :src="'http://localhost/project_67704982/api_php/uploads/' + product.image"
+            width="100%"
+            height="150"
+            class="card-img-top"
+            :alt="product.name"
+          ></td>
+
         </tr>
       </tbody>
     </table>
@@ -45,25 +56,26 @@ import { ref, onMounted } from "vue";
 export default {
   name: "CustomerList",
   setup() {
-    const customers = ref([]);
+    const products = ref([]);
     const loading = ref(true);
     const error = ref(null);
 
     // ฟังก์ชันดึงข้อมูลจาก API
-    const fetchCustomers = async () => {
+    const fetchProducts = async () => {
       try {
-        const response = await fetch("http://localhost/project_67704982/api_php/show_customer.php", {
-        method: "GET",
+        const response = await fetch("http://localhost/project_67704982/api_php/show_product.php", {
+            method: "GET",
             headers: {
                 "Content-Type": "application/json"
             }
-            });  
+        });  
+          
         if (!response.ok) {
           throw new Error("ไม่สามารถดึงข้อมูลได้");
         }
         const result = await response.json();
         if (result.success) {
-        customers.value = result.data;
+        products.value = result.data;
         }else{
             error.value = result.message
         }
@@ -76,11 +88,11 @@ export default {
     };
 
     onMounted(() => {
-      fetchCustomers();
+      fetchProducts();
     });
 
     return {
-      customers,
+      products,
       loading,
       error
     };

@@ -31,6 +31,18 @@ const routes = [
     
     component: () => import( '../views/Add_customer.vue')
   },
+  {
+    path: '/product',
+    name: 'product',
+    
+    component: () => import( '../views/Product.vue')
+  },
+  {
+    path: '/addproduct',
+    name: 'addproduct',
+    
+    component: () => import( '../views/Add_Product.vue')
+  },
 ]
 
 const router = createRouter({
