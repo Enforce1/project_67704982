@@ -42,7 +42,7 @@ export default {
   },
   methods: {
     async addStudent() {
-        console.log(this.student);
+        
         
 
       try {
@@ -57,7 +57,7 @@ export default {
         if (data.success) {
           // ✅ เคลียร์ข้อมูลใน textbox หลังบันทึกสำเร็จ
           this.student = { first_name: "", last_name: "", email: "", phone: ""};
-          this.$refs.fileInput.value = "";
+         
         }
 
       } catch (err) {

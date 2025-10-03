@@ -14,6 +14,7 @@
           <th>นามสกุล</th>
           <th>เบอร์โทร</th>
           <th>ชื่อผู้ใช้</th>
+          <th>ลบ</th>
         </tr>
       </thead>
       <tbody>
@@ -87,7 +88,7 @@ export default {
   if (!confirm("คุณต้องการลบข้อมูลนี้ใช่หรือไม่?")) return;
 
   try {
-    const response = await fetch("http://localhost/project_67704982/api_php/api.custommer.php", {
+    const response = await fetch("http://localhost/project_67704982/api_php/api_custommer.php", {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json"

@@ -13,22 +13,39 @@
         <li class="nav-item">
           <a class="nav-link" href="/showproduct">Show Product</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/product">Product</a>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Product
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/product">Product</a></li>
+            <li><a class="dropdown-item" href="/product_edit">Product edit</a></li>
+          </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/customer">Customer</a>
-        </li>
+       
         <li class="nav-item">
           <a class="nav-link" href="/student">Student</a>
         </li>
+
+         <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Customer
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/customer">Customer</a></li>
+            <li><a class="dropdown-item" href="/customer_edit">Customer edit</a></li>
+          </ul>
+        </li>
+        
+
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             login
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">login</a></li>
-            <li><a class="dropdown-item" href="#">-</a>logout</li>
+            <li><a class="dropdown-item" href="#"></a>logout</li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="add_customer">Register</a></li>
           </ul>

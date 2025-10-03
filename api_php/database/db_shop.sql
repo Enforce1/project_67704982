@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 26, 2025 at 06:55 AM
+-- Generation Time: Oct 03, 2025 at 06:43 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -136,18 +136,7 @@ INSERT INTO `students` (`student_id`, `first_name`, `last_name`, `email`, `phone
 (1, 'Somchai', 'Sukjai', 'somchai@example.com', '0811111111', '2025-09-26 03:18:51'),
 (2, 'Suda', 'Jaidee', 'suda@example.com', '0822222222', '2025-09-26 03:18:51'),
 (3, 'Anan', 'Thongdee', 'anan@example.com', '0833333333', '2025-09-26 03:18:51'),
-(4, 'daw', 'dwad', 'ge3gh', 'f565', '2025-09-26 04:45:55'),
-(5, 'daw', 'dwad', 'ge3gh', 'f565', '2025-09-26 04:45:55'),
-(6, 'daw', 'dwad', 'ge3gh', 'f565', '2025-09-26 04:45:56'),
-(7, 'daw', 'dwad', 'ge3gh', 'f565', '2025-09-26 04:45:56'),
-(8, 'daw', 'dwad', 'ge3gh', 'f565', '2025-09-26 04:45:56'),
-(9, 'daw', 'tgaw', 'wda', 'gaw', '2025-09-26 04:46:02'),
-(10, 'dwada', 'dawg', 'fawfa', 'fawf', '2025-09-26 04:47:11'),
-(11, 'dwa', 'daw', 'awg', 'fa', '2025-09-26 04:47:43'),
-(12, '1111', '111', '111', '1111', '2025-09-26 04:48:07'),
-(13, 'daw', 'dwa', 'faw', 'fa', '2025-09-26 04:48:52'),
-(14, 'asd', 'asd', 'asd', 'asd', '2025-09-26 04:50:03'),
-(15, '11', '11', '111', '111', '2025-09-26 04:52:28');
+(19, 'dad', 'afaf', 'aaa@gmail.com', '194949', '2025-10-03 04:18:47');
 
 --
 -- Indexes for dumped tables
@@ -227,7 +216,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `students`
 --
 ALTER TABLE `students`
-  MODIFY `student_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `student_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
